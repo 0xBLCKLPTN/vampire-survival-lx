@@ -2,6 +2,9 @@
 #define APPLICATION_H_
 
 #include "./includes.h"
+#include "./texture.h"
+#include "./player.h"
+
 
 typedef struct Application{
   uint32_t width, height;

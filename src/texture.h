@@ -1,8 +1,8 @@
 #ifndef TEXTURE_H_
 #define TEXTURE_H_
 
-#include "./includes.h"
 
+#include "./includes.h"
 
 SDL_Texture* load_image(SDL_Renderer* renderer, char* file_path, int outWidth, int outHeight) {
   SDL_Surface* loaded_surface = IMG_Load(file_path);

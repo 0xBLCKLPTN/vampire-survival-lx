@@ -1,8 +1,8 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-#include "./includes.h"
 
+#include "./includes.h"
 typedef struct {
   SDL_Renderer* renderer;
   bool is_moving;

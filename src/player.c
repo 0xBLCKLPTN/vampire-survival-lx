@@ -31,6 +31,7 @@ void move(Player* player, int dx, int dy) {
   player->is_moving = true;
 }
 
+
 void destroy_player(Player* player) {
   free(player);
 }

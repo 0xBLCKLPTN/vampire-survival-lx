@@ -5,8 +5,8 @@ sdl2_image_dep = dependency('sdl2_image')
 
 srcs = [
   './src/main.c',
+  './src/player.c',
   './src/application.c',
-  './src/player.c'
 ]
 
 executable('Vampire-Survival-LX', srcs, dependencies: [sdl2_dep, sdl2_image_dep])

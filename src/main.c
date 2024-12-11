@@ -1,7 +1,4 @@
 #include "./application.h"
-#include "./texture.h"
-#include "./player.h"
-#include <stdint.h>
 
 
 
