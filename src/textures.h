@@ -1,8 +1,10 @@
-#ifndef TEXTURE_H_
-#define TEXTURE_H_
-
-
-#include "./includes.h"
+#ifndef TEXTURES_H
+#define TEXTURES_H
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
 SDL_Texture* load_image(SDL_Renderer* renderer, char* file_path, int outWidth, int outHeight) {
   SDL_Surface* loaded_surface = IMG_Load(file_path);
@@ -41,4 +43,4 @@ SDL_Surface* scale_surface(SDL_Surface* surface, int width, int height) {
   return scaled_surface;
 }
 
-#endif // TEXTURE_H_
+#endif // TEXTURES_H
