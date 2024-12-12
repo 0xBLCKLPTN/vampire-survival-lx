@@ -17,6 +17,8 @@ typedef struct Player {
   float frame_delay;
   uint32_t last_frame_time;
   int direction;
+  SDL_Rect* rect;
+  int w, h;
 
   void (*move)(struct Player*, int dx, int dy);
 
@@ -38,6 +40,11 @@ Player* init_player(SDL_Renderer* renderer) {
   player->y = 600 / 2;
   player->is_moving = false;
 
+  player->stay_texture = load_image(player->renderer, "../Assets/d1.png", 64, 64);
+  player->rect->x = player->x;
+  player->rect->y = player->y;
+  player->w = 33; player->h = 32;
+
   return player;
 }
 
@@ -53,6 +60,17 @@ void move(Player* player, int dx, int dy) {
   player->is_moving = true;
 }
 
+/*
+void draw(Player* player)
+{
+  SDL_Rect dest_rect = {player->x - camera->x, player->y - camera->y, player->width * 2, player->height * 2};
+  SDL_RendererFlip flip = SDL_FLIP_NONE;
+
+  SDL_Texture* texture = NULL;
+
+  SDL_RenderCopyEx(player->renderer, texture, NULL, dest_rect, 0, NULL, flip);
+}
+*/
 
 void destroy_player(Player* player) {
   free(player);
